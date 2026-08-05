@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head class="pophead">
+<meta charset="UTF-8">
+<title>부서 선택</title>
+
+<link rel="stylesheet" href="/web/css/common.css">
+<link rel="stylesheet" href="/web/css/layout.css">
+<link rel="stylesheet" href="/web/css/menu.css">
+<link rel="stylesheet" href="/web/css/grid.css">
+
+<script src="/web/employee/department.js"></script>
+</head>
+<body>
+<div id="popcontent">
+    <h2>부서 선택</h2>
+    <div class="popupSearch">
+        <table class="searchTable">
+            <tr>
+                <th width="80">부서명</th>
+                <td><input type="text" id="search_name">
+                    <button onclick="loadDepartmentPopup()">조회</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <div class="popupGrid">
+        <table id="tblPopup" class="grid">
+            <thead>
+                <tr>
+                    <th width="100">부서코드</th>
+                    <th>부서명</th>
+                    <th width="70">선택</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<script>
+window.onload=function(){
+    loadDepartmentPopup();
+}
+</script>
+</body>
+</html>
