@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# python cache
+__pycache__/
+
+# .venv
+.venv/
+
+# .vscode
+.vscode/
+
+# local sql files
+.sql
+
+# local env files
+.env
+
+# firebase debug logs
+firebase-debug.log
