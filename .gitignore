@@ -19,5 +19,8 @@ __pycache__/
 # local env files
 .env
 
+# local git files
+.gitignore
+
 # firebase debug logs
 firebase-debug.log

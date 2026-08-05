@@ -1,0 +1,99 @@
+INSERT INTO TB_DEPARTMENT VALUES
+('1000','대표이사',NULL,1,'Y',GETDATE()),
+('1100','경영지원','1000',2,'Y',GETDATE()),
+('1200','개발팀','1000',3,'Y',GETDATE()),
+('1300','물류팀','1000',4,'Y',GETDATE()),
+('1400','영업팀','1000',5,'Y',GETDATE());
+
+INSERT INTO TB_POSITION VALUES
+('P01','사원',1,'Y'),
+('P02','주임',2,'Y'),
+('P03','대리',3,'Y'),
+('P04','과장',4,'Y'),
+('P05','차장',5,'Y'),
+('P06','부장',6,'Y');
+
+INSERT INTO TB_DUTY VALUES
+('D01','팀원',1,'Y'),
+('D02','팀장',2,'Y'),
+('D03','실장',3,'Y'),
+('D04','대표',4,'Y');
+
+
+
+INSERT INTO TB_DEVICE (
+DEVICE_ID,
+EMP_ID,
+LOGIN_ID,
+DEVICE_NAME,
+DEVICE_TYPE,
+PHONE_HASH,
+STATUS,
+REG_DATE,
+APPROVED_DATE
+)
+VALUES(
+'fe34ee17-1446-48f5-9b3c-37f584f2cbfd'
+, 1
+, 'ADMIN'
+, NULL
+, NULL
+, NULL
+, 'APPROVED'
+, GETDATE()
+, GETDATE()
+)
+
+
+insert into TB_EMPLOYEE
+(
+EMP_NO,
+LOGIN_ID,
+PASSWORD,
+EMP_NAME,
+DEPT_CD,
+POSITION_CD,
+DUTY_CD,
+PHONE,
+EMAIL,
+ZIP_CODE,
+ADDRESS1,
+ADDRESS2,
+BIRTH_DATE,
+JOIN_DATE,
+RETIRE_DATE,
+STATUS,
+DEVICE_ID,
+USE_YN,
+REMARK,
+REG_ID,
+REG_DATE,
+UPD_ID,
+UPD_DATE
+)
+values
+(
+'ADMIN',
+'ADMIN',
+'1234',
+'관리자',
+'1200',
+'P05',
+'D02',
+'',
+'',
+'',
+'',
+'',
+'',
+'2026-04-01',
+'',
+'ACTIVE',
+NULL,
+'Y',
+'',
+'ADMIN',
+GETDATE(),
+'ADMIN',
+GETDATE()
+)

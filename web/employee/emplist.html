@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>직원관리</title>
+
+<link rel="stylesheet" href="/web/css/common.css">
+<link rel="stylesheet" href="/web/css/layout.css">
+<link rel="stylesheet" href="/web/css/menu.css">
+<link rel="stylesheet" href="/web/css/grid.css">
+
+<script src="/web/js/layout.js"></script>
+
+<script src="/web/employee/employee.js"></script>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div id="menu"></div>
+
+<div id="content">
+    <div class="page-title">
+        <div>
+            <h2>직원관리</h2>
+            <span>직원목록</span>
+        </div>
+        <button class="btn-primary" onclick="employeeAdd()">신규등록</button>
+    </div>
+    <div class="search-box">
+        <table>
+            <tr>
+            <td>사번</td>
+            <td><input type="text" id="emp_no"></td>
+            <td>직원명</td>
+            <td><input type="text" id="emp_name"></td>
+            <td>부서</td>
+            <td>
+                <select id="dept_cd">
+                    <option value="">전체</option>
+                </select>
+            </td>
+            <td>상태</td>
+            <td>
+                <select id="status">
+                    <option value="">전체</option>
+                    <option value="ACTIVE">재직</option>
+                    <option value="LEAVE">휴직</option>
+                    <option value="RETIRE">퇴사</option>
+                </select>
+            </td>
+            <td><button class="btn-search" onclick="loadEmployee()">조회</button></td>
+            <td><button class="btn-default" onclick="searchReset()">초기화</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="grid-box">
+        <table id="tblData">
+        <thead>
+            <tr>
+            <th width="50"></th>
+            <th width="80">사번</th>
+            <th>직원명</th>
+            <th>부서</th>
+            <th>직급</th>
+            <th>휴대폰</th>
+            <th>입사일</th>
+            <th width="90">상태</th>
+            <th width="100">&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        </table>
+    </div>
+    <div class="paging"></div>
+</div>
+
+<div id="footer"></div>
+
+<script>
+window.onload=async()=>{
+    await loadLayout();
+    loadEmployee();
+}
+</script>
+</body>
+</html>
